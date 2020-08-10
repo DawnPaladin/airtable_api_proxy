@@ -1,10 +1,12 @@
-<h1>Food logger</h1>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-
-<script>
-    $.ready(() => {
-        $.ajax('/v0/foods').then((response, status, jqXHR) => {
-            console.log(response.foods);
-        });
-    })
-</script>
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react-dom.min.js"></script>        
+        <script type="text/babel" src="/food-logger.js"></script>
+    </head>
+    <body>
+        <h1>Food logger</h1>
+        <div id="appRoot"></div>
+    </body>
+</html>
