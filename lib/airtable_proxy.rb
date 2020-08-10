@@ -24,7 +24,7 @@ end
 get '/v0/foods' do
   content_type :json
   {
-    artists: meals_table.all.map {|food| food_to_dict(food)}
+    foods: meals_table.all.map {|food| food_to_dict(food)}
   }.to_json
 end
 
