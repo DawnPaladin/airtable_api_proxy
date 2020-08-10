@@ -1,0 +1,8 @@
+<h1>Food logger</h1>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+<script>
+    $.ajax('/v0/foods').then((response, status, jqXHR) => {
+        console.log(response.foods);
+    });
+</script>
