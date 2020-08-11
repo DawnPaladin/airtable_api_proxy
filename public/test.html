@@ -3,10 +3,39 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react-dom.min.js"></script>        
-        <script type="application/javascript" src="/food-logger.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script type="text/babel" src="/food-logger.js"></script>
     </head>
     <body>
         <h1>Food logger</h1>
-        <div id="appRoot"></div>
+        <form>
+            <label><input type="radio" name="person" value="Holly" checked/>Holly</label>
+            <label><input type="radio" name="person" value="James"/>James</label>
+            <div>
+                <label>
+                    Date & time<br/>
+                    <input type="datetime-local" name="datetime"/>
+                    <button>Now</button>
+                </label>
+            </div>
+            <div>
+                <label>
+                    Description<br/>
+                    <textarea></textarea>
+                </label>
+            </div>
+            <div>
+                <label>
+                    Attach photo
+                    <input type="file" accept="image/jpeg" capture="environment" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    Calorie count
+                    <div id="appRoot"></div>
+                </label>
+            </div>
+        </form>
     </body>
 </html>

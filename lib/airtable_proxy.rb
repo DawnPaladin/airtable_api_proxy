@@ -7,7 +7,7 @@ set :public_folder, File.dirname(__FILE__) + '/../public'
 
 airtable_client = Airtable::Client.new(ENV['AIRTABLE_API_KEY'])
 base_id = ENV['AIRTABLE_BASE_ID']
-meals_table = airtable_client.table(base_id, 'Meals eaten')
+foods_table = airtable_client.table(base_id, 'Foods')
 
 def food_to_dict(food)
   {
@@ -24,7 +24,7 @@ end
 get '/v0/foods' do
   content_type :json
   {
-    foods: meals_table.all.map {|food| food_to_dict(food)}
+    foods: foods_table.all.map {|food| food_to_dict(food)}
   }.to_json
 end
 
